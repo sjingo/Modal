@@ -1,8 +1,11 @@
-import React from 'react';
+import React,{useReducer} from 'react';
 import logo from './logo.svg';
+import Modal from './Modal'
+import ModalReducer from './reducer-modal'
 import './App.css';
 
 function App() {
+  const [state,dispatch] = useReducer(ModalReducer)
   return (
     <div className="App">
       <header className="App-header">
@@ -19,6 +22,9 @@ function App() {
           Learn React
         </a>
       </header>
+      <button onClick={() => dispatch({ type: 'OPEN_MODAL' })}>open</button>
+      <Modal/>
+
     </div>
   );
 }

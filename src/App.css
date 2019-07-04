@@ -31,3 +31,21 @@
     transform: rotate(360deg);
   }
 }
+.Modal{
+  background: white;
+  position: absolute;
+  top: 20vh;
+  left: 20vw;
+  height: 80vh;
+  transition : all 0.333s ease;
+  width: 80vw;
+  z-index: 11;
+}
+.is-open{
+  transform: scale(1);
+  opacity: 1;
+}
+.is-closed{
+  transform: scale(0);
+  opacity: 0;
+}
